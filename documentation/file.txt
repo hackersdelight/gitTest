@@ -1,1 +1,2 @@
 git filter-branch --tree-filter 'test -d documentation/70 && mv documentation/70/* documentation || echo "Nothing to do"' HEAD
+git filter-branch --tree-filter 'test -e documentation/test.zip && unzip documentation/test.zip -d documentation || echo "Nothing to do"' HEAD
